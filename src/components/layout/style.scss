@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css?family=DM+Sans&display=swap");
+@import "./vars.scss";
+
+html,
+body {
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  color: $dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bui__align {
+  display: flex;
+
+  &-left {
+    justify-content: flex-start;
+  }
+
+  &-center {
+    justify-content: center;
+  }
+
+  &-right {
+    justify-content: flex-end;
+  }
+}

@@ -1,0 +1,11 @@
+@import "../Layout/background.scss";
+
+.bui-badge {
+  padding: 0.25rem 0.4rem;
+  display: inline-block;
+  font-size: 0.75rem;
+  border-radius: 0.4rem;
+  margin: 4px;
+
+  @include background-color;
+}

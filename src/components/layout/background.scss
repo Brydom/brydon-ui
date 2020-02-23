@@ -1,0 +1,59 @@
+@import "./vars.scss";
+
+@mixin background-color {
+  &.bui-primary {
+    background-color: $primary;
+    color: white;
+  }
+
+  &.bui-success {
+    background-color: $success;
+    color: white;
+  }
+
+  &.bui-danger {
+    background-color: $danger;
+    color: white;
+  }
+
+  &.bui-warning {
+    background-color: $warning;
+  }
+
+  &.bui-light {
+    background-color: $light;
+  }
+
+  &.bui-dark {
+    background-color: $dark;
+    color: white;
+  }
+}
+
+@mixin darken-background-color-on-hover {
+  &:hover {
+    &.bui-primary {
+      background-color: darken($primary, 2.5%);
+    }
+
+    &.bui-success {
+      background-color: darken($success, 2.5%);
+    }
+
+    &.bui-danger {
+      background-color: darken($danger, 2.5%);
+    }
+
+    &.bui-warning {
+      background-color: darken($warning, 2.5%);
+    }
+
+    &.bui-light {
+      background-color: darken($light, 2.5%);
+    }
+
+    &.bui-dark {
+      background-color: darken($dark, 2.5%);
+    }
+  }
+}
