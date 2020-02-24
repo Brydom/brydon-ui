@@ -1,22 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import classes from "classnames";
 import "./style.scss";
 
-const Alert = ({
-  children,
-  dismissable,
-  dismissed = false,
-  theme,
-  align = "left"
-}) => {
-  const [isDismissed, setIsDismissed] = useState(dismissed);
+const Alert = props => {
+  const { children, theme = "primary", align = "left" } = props;
 
-  return isDismissed && dismissable ? null : (
+  return (
     <div
+      {...props}
       className={classes(
         "bui-alert",
         `bui-align--${align}`,
-        theme ? `bui-${theme}` : "bui-primary"
+        `bui-${theme}`,
+        props.className
       )}
     >
       {children}

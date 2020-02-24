@@ -1,3 +1,5 @@
+@import "../layout/vars.scss";
+
 .bui-btn-group {
   display: inline-flex;
 
@@ -24,12 +26,12 @@
       }
 
       &:first-child {
-        border-radius: 0.4rem 0.4rem 0 0;
+        border-radius: $border-radius $border-radius 0 0;
         margin-bottom: 0;
       }
 
       &:last-child {
-        border-radius: 0 0 0.4rem 0.4rem;
+        border-radius: 0 0 $border-radius $border-radius;
         margin-top: 0;
       }
     }
@@ -45,12 +47,12 @@
       }
 
       &:first-child {
-        border-radius: 0.4rem 0 0 0.4rem;
+        border-radius: $border-radius 0 0 $border-radius;
         margin-right: 0;
       }
 
       &:last-child {
-        border-radius: 0 0.4rem 0.4rem 0;
+        border-radius: 0 $border-radius $border-radius 0;
         margin-left: 0;
       }
     }

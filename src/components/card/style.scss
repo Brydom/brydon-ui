@@ -1,0 +1,34 @@
+@import "../layout/vars.scss";
+
+.bui-card {
+  box-shadow: 0 1px 28px rgba(0, 0, 0, 0.05), 0 10px 10px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  border-radius: $border-radius;
+
+  &-header {
+    padding: 1rem;
+    background-color: $faded;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &-image {
+    max-height: 200px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &-body {
+    padding: 1rem;
+  }
+
+  &-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  &-footer {
+    padding: 1rem;
+    background-color: $faded;
+  }
+}

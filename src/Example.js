@@ -1,5 +1,17 @@
 import React, { useState } from "react";
-import { BrydonUI, Alert, Badge, Button, ButtonGroup } from "./components";
+import {
+  BrydonUI,
+  Alert,
+  Badge,
+  Button,
+  ButtonGroup,
+  Card,
+  CardHeader,
+  CardImage,
+  CardBody,
+  CardTitle,
+  CardFooter
+} from "./components";
 
 const App = () => {
   const [comp, setComp] = useState("alert");
@@ -11,10 +23,11 @@ const App = () => {
         <Button onClick={() => setComp("badge")}>Badges</Button>
         <Button onClick={() => setComp("button")}>Buttons</Button>
         <Button onClick={() => setComp("buttongroup")}>Button Groups</Button>
+        <Button onClick={() => setComp("card")}>Cards</Button>
       </div>
       {comp === "alert" ? (
         <>
-          <Alert theme="primary" align="left">
+          <Alert align="left" className="custom class names">
             Primary, left
           </Alert>
           <Alert theme="danger" align="right">
@@ -26,7 +39,9 @@ const App = () => {
         </>
       ) : comp === "badge" ? (
         <>
-          <Badge theme="primary">This is a badge</Badge>
+          <Badge theme="primary" className="custom" onClick={window.alert}>
+            Alerty badge
+          </Badge>
           <Badge theme="success">This is a badge</Badge>
           <Badge theme="warning">This is a badge</Badge>
           <Badge theme="danger">This is a badge</Badge>
@@ -70,6 +85,22 @@ const App = () => {
             <Button theme="warning">Warning</Button>
             <Button theme="danger">Danger</Button>
           </ButtonGroup>
+        </>
+      ) : comp === "card" ? (
+        <>
+          <Card>
+            <CardHeader>Some header</CardHeader>
+            <CardImage
+              src="https://via.placeholder.com/300x"
+              alt="Some image"
+            />
+            <CardBody>
+              <CardTitle>Some title</CardTitle>
+              <p>Whaaaat?</p>
+              <Button>Lol</Button>
+            </CardBody>
+            <CardFooter>Some footer</CardFooter>
+          </Card>
         </>
       ) : null}
     </BrydonUI>

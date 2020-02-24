@@ -2,17 +2,22 @@ import React from "react";
 import classes from "classnames";
 import "./style.scss";
 
-const Button = ({ theme, onClick, size = "lg", children }) => (
-  <button
-    onClick={onClick}
-    className={classes(
-      "bui-btn",
-      theme ? `bui-${theme}` : "bui-primary",
-      `bui-btn--${size}`
-    )}
-  >
-    {children}
-  </button>
-);
+const Button = props => {
+  const { theme = "primary", size = "lg" } = props;
+
+  return (
+    <button
+      {...props}
+      className={classes(
+        "bui-btn",
+        `bui-${theme}`,
+        `bui-btn--${size}`,
+        props.className
+      )}
+    >
+      {props.children}
+    </button>
+  );
+};
 
 export default Button;
