@@ -12,6 +12,10 @@
   transition: box-shadow 0.25s ease, background-color 0.25s ease;
   cursor: pointer;
 
+  & ~ *:not(.bui-in-group) {
+    margin-left: 0.5rem;
+  }
+
   &--md {
     font-size: 0.8rem;
     padding: 0.6rem;

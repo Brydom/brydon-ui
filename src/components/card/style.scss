@@ -5,6 +5,10 @@
   max-width: 300px;
   border-radius: $border-radius;
 
+  & ~ * {
+    margin-left: 0.5rem;
+  }
+
   &-header {
     padding: 1rem;
     background-color: $faded;

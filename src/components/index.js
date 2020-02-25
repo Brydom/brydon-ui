@@ -10,6 +10,7 @@ import Card, {
   CardTitle,
   CardFooter
 } from "./card";
+import Container, { Row, Col } from "./container";
 
 export {
   BrydonUI,
@@ -22,5 +23,8 @@ export {
   CardImage,
   CardBody,
   CardTitle,
-  CardFooter
+  CardFooter,
+  Container,
+  Row,
+  Col
 };

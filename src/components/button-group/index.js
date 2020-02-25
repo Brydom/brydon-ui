@@ -16,7 +16,7 @@ const ButtonGroup = props => {
       )}
     >
       {props.children.map(element => (
-        <Button {...element.props} size={size}></Button>
+        <Button {...element.props} size={size} className={classes(element.className, 'bui-in-group')}></Button>
       ))}
     </div>
   );

@@ -7,5 +7,9 @@
   font-size: 0.75rem;
   border-radius: $border-radius;
 
+  & ~ * {
+    margin-left: 0.5rem;
+  }
+
   @include background-color;
 }
