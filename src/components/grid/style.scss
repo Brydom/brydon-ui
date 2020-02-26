@@ -1,0 +1,32 @@
+.bui-grid {
+  width: 100%;
+  margin: 1rem auto 1rem auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  &--no-wrap {
+    flex-wrap: nowrap;
+  }
+
+  .bui-grid-item {
+    &--one-quarter {
+      flex-basis: 25%;
+    }
+
+    &--one-half {
+      flex-basis: 50%;
+    }
+
+    &--one-third {
+      flex-basis: 33%;
+    }
+
+    &--three-quarters {
+      flex-basis: 75%;
+    }
+
+    &--one-whole {
+      flex-basis: 100%;
+    }
+  }
+}

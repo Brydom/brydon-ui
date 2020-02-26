@@ -13,7 +13,9 @@ import {
   CardFooter,
   Container,
   Row,
-  Col
+  Col,
+  Grid,
+  GridItem
 } from "./components";
 
 const App = () => {
@@ -28,6 +30,7 @@ const App = () => {
         <Button onClick={() => setComp("buttongroup")}>Button Groups</Button>
         <Button onClick={() => setComp("card")}>Cards</Button>
         <Button onClick={() => setComp("container")}>Containers</Button>
+        <Button onClick={() => setComp("grid")}>Grids</Button>
       </Container>
       <Container>
         {comp === "alert" ? (
@@ -110,20 +113,30 @@ const App = () => {
         ) : comp === "container" ? (
           <Container>
             <Row>
-              <Col style={{border: '1px solid black'}}>Hello!</Col>
-              <Col style={{border: '1px solid black'}}>Hello!</Col>
-              <Col style={{border: '1px solid black'}}>Hello!</Col>
+              <Col style={{ border: "1px solid black" }}>Hello!</Col>
+              <Col style={{ border: "1px solid black" }}>Hello!</Col>
+              <Col style={{ border: "1px solid black" }}>Hello!</Col>
             </Row>
             <Row>
-              <Col style={{border: '1px solid black'}}>Hello!</Col>
-              <Col style={{border: '1px solid black'}}>Hello!</Col>
-              <Col style={{border: '1px solid black'}}>Hello!</Col>
-              <Col style={{border: '1px solid black'}}>Hello!</Col>
+              <Col style={{ border: "1px solid black" }}>Hello!</Col>
+              <Col style={{ border: "1px solid black" }}>Hello!</Col>
+              <Col style={{ border: "1px solid black" }}>Hello!</Col>
+              <Col style={{ border: "1px solid black" }}>Hello!</Col>
             </Row>
             <Row>
-              <Col style={{border: '1px solid black'}}>Hello!</Col>
-              <Col style={{border: '1px solid black'}}>Hello!</Col>
+              <Col style={{ border: "1px solid black" }}>Hello!</Col>
+              <Col style={{ border: "1px solid black" }}>Hello!</Col>
             </Row>
+          </Container>
+        ) : comp === "grid" ? (
+          <Container>
+            <Grid>
+              <GridItem size="one-quarter">one-quarter</GridItem>
+              <GridItem size="one-half">one-half</GridItem>
+              <GridItem size="one-quarter">one-quarter</GridItem>
+              <GridItem size="three-quarters">three quarters</GridItem>
+              <GridItem>default</GridItem>
+            </Grid>
           </Container>
         ) : null}
       </Container>

@@ -11,6 +11,7 @@ import Card, {
   CardFooter
 } from "./card";
 import Container, { Row, Col } from "./container";
+import Grid, { GridItem } from "./grid";
 
 export {
   BrydonUI,
@@ -26,5 +27,7 @@ export {
   CardFooter,
   Container,
   Row,
-  Col
+  Col,
+  Grid,
+  GridItem
 };

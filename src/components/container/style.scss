@@ -1,7 +1,5 @@
 .bui-container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
   margin: 1rem auto 1rem auto;
 
   @media (min-width: 576px) {
@@ -23,8 +21,6 @@
   .bui-row {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
   }
 
   .bui-col {
