@@ -3,7 +3,7 @@ import classes from "classnames";
 import "./style.scss";
 
 const Button = props => {
-  const { theme = "primary", size = "lg" } = props;
+  const { theme = "primary", size = "md" } = props;
 
   return (
     <button

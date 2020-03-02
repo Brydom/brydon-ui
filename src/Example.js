@@ -64,7 +64,7 @@ const App = () => {
             <Button theme="danger">Click me!</Button>
             <Button theme="light">Click me!</Button>
             <Button theme="dark">Click me!</Button>
-            <Button theme="primary" size="md">
+            <Button theme="primary" size="lg">
               Click me!
             </Button>
             <Button theme="primary" size="sm">
