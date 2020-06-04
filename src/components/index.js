@@ -12,6 +12,7 @@ import Card, {
 } from "./card";
 import Container, { Row, Col } from "./container";
 import Grid, { GridItem } from "./grid";
+import Input from "./input";
 
 export {
   BrydonUI,
@@ -29,5 +30,6 @@ export {
   Row,
   Col,
   Grid,
-  GridItem
+  GridItem,
+  Input
 };

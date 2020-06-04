@@ -15,11 +15,13 @@ import {
   Row,
   Col,
   Grid,
-  GridItem
+  GridItem,
+  Input
 } from "./components";
 
 const App = () => {
   const [comp, setComp] = useState("alert");
+  const [inpValue, setInpValue] = useState("");
 
   return (
     <BrydonUI>
@@ -31,6 +33,7 @@ const App = () => {
         <Button onClick={() => setComp("card")}>Cards</Button>
         <Button onClick={() => setComp("container")}>Containers</Button>
         <Button onClick={() => setComp("grid")}>Grids</Button>
+        <Button onClick={() => setComp("input")}>Inputs</Button>
       </Container>
       <Container>
         {comp === "alert" ? (
@@ -137,6 +140,17 @@ const App = () => {
               <GridItem size="three-quarters">three quarters</GridItem>
               <GridItem>default</GridItem>
             </Grid>
+          </Container>
+        ) : comp === "input" ? (
+          <Container>
+            <Input
+              value={inpValue}
+              onChange={event => setInpValue(event.target.value)}
+              valid={inpValue.length < 3 ? null : inpValue.includes("@")}
+            />
+            <Input value="A success!" valid={true} />
+            <Input size="lg" value="Large, valid!" valid={true} />
+            <Input size="sm" value="Small, invalid!" valid={false} />
           </Container>
         ) : null}
       </Container>

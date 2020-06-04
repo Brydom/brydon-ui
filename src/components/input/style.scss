@@ -1,0 +1,56 @@
+@import "../../scss/shadow.scss";
+@import "../../scss/outline.scss";
+@import "../../scss/vars.scss";
+
+.bui-input {
+  font-size: 0.9rem;
+  padding: 0.7rem;
+  display: inline-block;
+  border-radius: $border-radius;
+  border: 0;
+  transition: box-shadow 0.25s ease, background-color 0.25s ease,
+    border-color 0.25s ease;
+  cursor: pointer;
+
+  & ~ *:not(.bui-in-group) {
+    margin-left: 0.5rem;
+  }
+
+  &--lg {
+    padding: 1.1rem;
+    font-size: 1rem;
+  }
+
+  &--sm {
+    font-size: 0.7rem;
+    padding: 0.5rem;
+  }
+
+  &:active {
+    transition: background-color 0.25s ease;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  @include light-border;
+  @include dark-border-on-hover;
+
+  &.bui-valid {
+    @include specific-shadow($success);
+    @include specific-border($success);
+    @include faded-specific-border-on-focus($success);
+  }
+
+  &.bui-invalid {
+    @include specific-shadow($danger);
+    @include specific-border($danger);
+    @include faded-specific-border-on-focus($danger);
+  }
+
+  &:not(.bui-valid):not(.bui-invalid) {
+    @include themed-shadow-on-focus;
+    @include themed-border-on-focus;
+  }
+}

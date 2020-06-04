@@ -35,5 +35,10 @@
   },
   "devDependencies": {
     "react-docgen": "^5.2.1"
+  },
+  "bit": {
+    "env": {},
+    "componentsDefaultDirectory": "components/{name}",
+    "packageManager": "npm"
   }
 }
